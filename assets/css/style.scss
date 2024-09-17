@@ -1,0 +1,14 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Custom styles for image
+.profile-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+}
