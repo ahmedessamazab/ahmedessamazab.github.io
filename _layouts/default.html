@@ -7,9 +7,39 @@
 
     {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
+    <style>
+      /* Fixed background image */
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url('dreamy-interior-mall.jpg'); /* Adjust the path to your image */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* Makes the image stay fixed during scroll */
+      }
+
+      .wrapper {
+        position: relative;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background for readability */
+        padding: 20px;
+        margin: 50px auto;
+        border-radius: 10px;
+        max-width: 800px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1, h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      a {
+        color: #4CAF50;
+        text-decoration: none;
+      }
+    </style>
+
     {% include head-custom.html %}
   </head>
   <body>
