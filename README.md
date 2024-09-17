@@ -1,4 +1,5 @@
-6th of October, Egypt | +201226976907  
+**Location**: 6th of October, Egypt | **Phone**: +201226976907
+
 [Email](mailto:ahmedazab1235@yahoo.com) | [LinkedIn](https://www.linkedin.com/in/ahmedessam1235) | [GitHub](https://github.com/ahmedazab1235)
 
 
@@ -94,3 +95,8 @@ Monofiya University | Graduated May 2020
 
 - **Languages**: Native Arabic, Fluent English  
 - **Date of Birth**: October 1, 1997
+
+---
+
+## References
+References available upon request.
