@@ -5,7 +5,7 @@
 
 ---
 
-![Profile Image](./DSC_4479%20copy.png)
+![Profile Image]({{ site.image }})
 
 ---
 
