@@ -61,7 +61,7 @@
 **Master in Computer Science**  
 Monofiya University | Sep 2022 – Present
 
-**ITI | AI Pro Program**  
+**ITI AI Pro Diploma 9 months **  
 Nasr City, Egypt | Sep 2021
 
 **Bachelor of Electrical and Computer Engineering**  
