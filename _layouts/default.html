@@ -12,7 +12,7 @@
       body {
         margin: 0;
         padding: 0;
-        background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Adjust the gradient colors as needed */
+        background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient colors */
         min-height: 100vh;
         display: flex;
         justify-content: center;
@@ -40,24 +40,24 @@
       /* Preserve default alignment for headings inside markdown content */
       section h2 {
         text-align: left;
-        color: #333; /* Optionally, you can adjust the color if needed */
+        color: #333;
       }
 
-      /* Change link color to something more comfortable */
+      /* Make links darker than the background */
       a {
-        color: #1a73e8 !important; /* Softer blue for links */
+        color: #4b2c20 !important; /* Very dark brownish-red */
         text-decoration: none;
       }
 
-      /* Add a hover effect for links */
+      /* Darken further on hover */
       a:hover {
-        color: #0056b3 !important; /* Darker blue on hover */
+        color: #321c13 !important; /* Even darker on hover */
       }
 
       /* Darker "Download My CV" button */
       .cv-download a {
         font-size: 18px;
-        background-color: #36454F; /* Darker reddish-brown button */
+        background-color: #a33e2a; /* Darker reddish-brown button */
         color: white;
         padding: 10px 20px;
         border-radius: 5px;
@@ -69,17 +69,18 @@
         background-color: #7a2e1f; /* Darker shade on hover */
       }
 
-      /* Add extra space under the "Download My CV" button */
+      /* Add extra space under and before the "Download My CV" button */
       .cv-download {
         text-align: center;
-        margin-top: 20px;
-        margin-bottom: 40px; /* Add space below the button */
+        margin-top: 40px; /* Increased space above the button */
+        margin-bottom: 40px; /* Space below the button */
       }
 
       /* Responsive adjustments */
       @media (max-width: 600px) {
         .cv-download {
-          margin-bottom: 60px; /* Add even more space on smaller screens */
+          margin-top: 30px; /* Smaller space for mobile screens */
+          margin-bottom: 60px; /* Add more space below the button on smaller screens */
         }
       }
     </style>
@@ -105,7 +106,7 @@
 
         <!-- CV Download Section -->
         <div class="cv-download">
-          <a href="{{ 'AHMED AZAB DE.pdf' | relative_url }}" download="AhmedAzab_CV.pdf" style="text-decoration: none; font-size: 18px; background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 5px;">Download My CV</a>
+          <a href="{{ 'AHMED AZAB DE.pdf' | relative_url }}" download="AhmedAzab_CV.pdf">Download My CV</a>
         </div>
       </header>
 
