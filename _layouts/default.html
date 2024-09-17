@@ -47,6 +47,20 @@
         color: #4CAF50;
         text-decoration: none;
       }
+
+      /* Add extra space under the "Download My CV" button */
+      .cv-download {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 40px; /* Add space below the button */
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 600px) {
+        .cv-download {
+          margin-bottom: 60px; /* Add even more space on smaller screens */
+        }
+      }
     </style>
 
     <!--[if lt IE 9]>
@@ -69,7 +83,7 @@
         {% endif %}
 
         <!-- CV Download Section -->
-        <div style="text-align: center; margin-top: 20px;">
+        <div class="cv-download">
           <a href="{{ 'AHMED AZAB DE.pdf' | relative_url }}" download="AhmedAzab_CV.pdf" style="text-decoration: none; font-size: 18px; background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 5px;">Download My CV</a>
         </div>
       </header>
