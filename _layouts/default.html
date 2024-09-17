@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% seo %}
+    {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -15,12 +15,23 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        <!-- Title -->
+        <h1 style="text-align: center;"><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        
+        <!-- New H2 for "Data Engineer" centered under the title -->
+        <h2 style="text-align: center;">Data Engineer</h2>
 
+        <!-- Logo with updated size -->
         {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" style="width: 200px; height: 200px; border-radius: 50%; display: block; margin: 0 auto;" />
+          <img src="{{site.logo | relative_url}}" alt="Logo" style="width: 400px; height: 400px; border-radius: 50%; display: block; margin: 0 auto;" />
         {% endif %}
 
+        <!-- CV Download Section -->
+        <div style="text-align: center; margin-top: 20px;">
+          <a href="{{ '/assets/cv/AhmedAzabCV.pdf' | relative_url }}" download="AhmedAzab_CV.pdf" style="text-decoration: none; font-size: 18px; background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 5px;">Download My CV</a>
+        </div>
+
+        <!-- Downloads (Optional) -->
         {% if site.show_downloads %}
         <ul class="downloads">
           <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
