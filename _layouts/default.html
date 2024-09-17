@@ -7,27 +7,9 @@
 
     {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <style>
-      /* Add a relevant machine learning/data pipeline image */
-      body {
-        background-image: url('{{ "/assets/images/data_pipeline_bg.jpg" | relative_url }}'); /* Path to your image */
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-      }
-
-      /* Ensure the content remains readable */
-      .wrapper {
-        background-color: rgba(255, 255, 255, 0.9); /* Adds a subtle white overlay */
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      a {
-        color: #4CAF50;
-      }
-    </style>
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
     {% include head-custom.html %}
   </head>
   <body>
