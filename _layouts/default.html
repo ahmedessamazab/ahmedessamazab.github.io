@@ -19,11 +19,11 @@
         align-items: center;
       }
 
-      /* Make wrapper background slightly transparent */
+      /* Wrapper styling */
       .wrapper {
         position: relative;
         z-index: 1;
-        background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency here */
+        background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background for readability */
         padding: 20px;
         margin: 50px auto;
         border-radius: 10px;
@@ -31,9 +31,16 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
 
-      h1, h2 {
+      /* Only center the h1 and h2 in the header section */
+      header h1, header h2 {
         text-align: center;
         color: #333;
+      }
+
+      /* Preserve default alignment for headings inside markdown content */
+      section h2 {
+        text-align: left;
+        color: #333; /* Optionally, you can adjust the color if needed */
       }
 
       a {
@@ -65,14 +72,13 @@
         <div style="text-align: center; margin-top: 20px;">
           <a href="{{ 'AHMED AZAB DE.pdf' | relative_url }}" download="AhmedAzab_CV.pdf" style="text-decoration: none; font-size: 18px; background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 5px;">Download My CV</a>
         </div>
-
       </header>
+
       <section>
-
-      {{ content }}
-
+        {{ content }}
       </section>
     </div>
+
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
 </html>
