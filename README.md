@@ -24,6 +24,20 @@
 **Apr 2022 - Oct 2022 | Full time | Egypt**  
 - Enhanced technical support team performance with NLP-based ticket distribution system.
 - Led web scraping projects using Selenium and Beautiful Soup.
+  
+### [Upwork](https://www.upwork.com/freelancers/~01876e0baed413206d) | Data Science Freelancer (Top Rated)  
+**Oct 2021 - Apr 2022 | Freelance**  
+- Completed various data science projects, generating over $5,000 in revenue.
+- Developed an automated data collection script, expediting website transformation and boosting company profits.
+- Implemented machine learning solutions in Matlab projects and executed numerous web scraping assignments.
+- Maintained a perfect 5/5 rating across all projects, reflecting exceptional quality and client satisfaction.
+- Achieved a 100% Job Success Score (JSS), demonstrating consistent delivery of top-tier results and reliability.
+
+### [Corporatica](https://corporatica.com/) | Machine Learning Intern  
+**Dec 2021 – Feb 2022 | Full time | Remote**  
+- Focused on the design and development of machine learning and deep learning systems.
+- Contributed to the creation of a chatbot by preparing and collecting data.
+- Gained experience working with AWS services.
 
 ---
 
