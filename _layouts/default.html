@@ -1,34 +1,61 @@
-<div class="stars">
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
-</div>
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div class="wrapper">
-  <header>
-    <!-- Title -->
-    <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-    
-    <!-- Subtitle "Data Engineer" -->
-    <h2 style="text-align: center;">Data Engineer</h2>
+    {% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <style>
+      /* Add a relevant machine learning/data pipeline image */
+      body {
+        background-image: url('{{ "/assets/images/data_pipeline_bg.jpg" | relative_url }}'); /* Path to your image */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
 
-    <!-- Logo -->
-    {% if site.logo %}
-      <img src="{{site.logo | relative_url}}" alt="Logo" style="width: 250px; height: 250px; border-radius: 50%; display: block; margin: 0 auto;" />
-    {% endif %}
+      /* Ensure the content remains readable */
+      .wrapper {
+        background-color: rgba(255, 255, 255, 0.9); /* Adds a subtle white overlay */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
 
-    <!-- CV Download Button -->
-    <div style="text-align: center; margin-top: 20px;">
-      <a href="{{ 'AHMED AZAB DE.pdf' | relative_url }}" download="AhmedAzab_CV.pdf" style="text-decoration: none; font-size: 18px; background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 5px;">Download My CV</a>
+      a {
+        color: #4CAF50;
+      }
+    </style>
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <!-- Title -->
+        <h1 style="text-align: center;"><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        
+        <!-- New H2 for "Data Engineer" centered under the title -->
+        <h2 style="text-align: center;">Data Engineer</h2>
+
+        <!-- Logo with updated size -->
+        {% if site.logo %}
+          <img src="{{site.logo | relative_url}}" alt="Logo" style="width: 250px; height: 250px; border-radius: 50%; display: block; margin: 0 auto;" />
+        {% endif %}
+
+        <!-- CV Download Section -->
+        <div style="text-align: center; margin-top: 20px;">
+          <a href="{{ 'AHMED AZAB DE.pdf' | relative_url }}" download="AhmedAzab_CV.pdf" style="text-decoration: none; font-size: 18px; background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 5px;">Download My CV</a>
+        </div>
+
+      </header>
+      <section>
+
+      {{ content }}
+
+      </section>
     </div>
-  </header>
-
-  <section>
-    {{ content }}
-  </section>
-</div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  </body>
+</html>
