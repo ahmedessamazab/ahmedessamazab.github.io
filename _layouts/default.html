@@ -8,41 +8,59 @@
     {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <style>
-      /* Add the animated gradient background */
-      body {
-        background: linear-gradient(270deg, #ff7e5f, #feb47b, #6a82fb, #fc5c7d);
-        background-size: 800% 800%;
-        animation: gradientAnimation 10s ease infinite;
+      /* Fullscreen Particle Background */
+      #particles-js {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        z-index: -1; /* Ensure the particles are behind the content */
+        top: 0;
+        left: 0;
       }
 
-      @keyframes gradientAnimation {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
-
-      /* Ensure text content remains readable */
+      /* Wrapper for the main content */
       .wrapper {
-        background-color: rgba(255, 255, 255, 0.8); /* Adds a subtle white overlay */
+        position: relative;
+        z-index: 1; /* Ensure content is above particles */
+        background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background for readability */
         padding: 20px;
+        margin: 50px auto;
         border-radius: 10px;
+        max-width: 800px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Content alignment and styling */
+      h1, h2 {
+        text-align: center;
+        color: #333;
       }
 
       a {
         color: #4CAF50;
+        text-decoration: none;
       }
-
     </style>
+
+    <!-- Include Particle.js Library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
     {% include head-custom.html %}
   </head>
   <body>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Main Content Wrapper -->
     <div class="wrapper">
       <header>
         <!-- Title -->
-        <h1 style="text-align: center;"><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
         
         <!-- New H2 for "Data Engineer" centered under the title -->
-        <h2 style="text-align: center;">Data Engineer</h2>
+        <h2>Data Engineer</h2>
 
         <!-- Logo with updated size -->
         {% if site.logo %}
@@ -56,11 +74,94 @@
 
       </header>
       <section>
-
-      {{ content }}
-
+        {{ content }}
       </section>
     </div>
+
+    <!-- Particle.js Configuration -->
+    <script>
+      particlesJS("particles-js", {
+        "particles": {
+          "number": {
+            "value": 100,
+            "density": {
+              "enable": true,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#00ff00"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            },
+            "polygon": {
+              "nb_sides": 5
+            }
+          },
+          "opacity": {
+            "value": 0.5,
+            "random": false,
+            "anim": {
+              "enable": false,
+              "speed": 1,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 5,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 40,
+              "size_min": 0.1,
+              "sync": false
+            }
+          },
+          "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#00ff00",
+            "opacity": 0.4,
+            "width": 1
+          },
+          "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": false,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": {
+              "enable": true,
+              "mode": "grab"
+            },
+            "onclick": {
+              "enable": true,
+              "mode": "push"
+            },
+            "resize": true
+          }
+        },
+        "retina_detect": true
+      });
+    </script>
+
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
 </html>
