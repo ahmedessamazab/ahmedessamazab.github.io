@@ -45,13 +45,28 @@
 
       /* Make links darker than the background */
       a {
-        color: #b3541e !important; /* Darker shade of orange */
+        color: #4b2c20 !important; /* Very dark brownish-red */
         text-decoration: none;
       }
 
       /* Darken further on hover */
       a:hover {
-        color: #8c3f14 !important; /* Darker brownish-orange on hover */
+        color: #321c13 !important; /* Even darker on hover */
+      }
+
+      /* Darker "Download My CV" button */
+      .cv-download a {
+        font-size: 18px;
+        background-color: #a33e2a; /* Darker reddish-brown button */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+
+      /* Darker button on hover */
+      .cv-download a:hover {
+        background-color: #7a2e1f; /* Darker shade on hover */
       }
 
       /* Add extra space under the "Download My CV" button */
@@ -90,7 +105,7 @@
 
         <!-- CV Download Section -->
         <div class="cv-download">
-          <a href="{{ 'AHMED AZAB DE.pdf' | relative_url }}" download="AhmedAzab_CV.pdf" style="text-decoration: none; font-size: 18px; background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 5px;">Download My CV</a>
+          <a href="{{ 'AHMED AZAB DE.pdf' | relative_url }}" download="AhmedAzab_CV.pdf">Download My CV</a>
         </div>
       </header>
 
