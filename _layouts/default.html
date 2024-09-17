@@ -8,22 +8,20 @@
     {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <style>
-      /* Fullscreen Particle Background */
-      #particles-js {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: #000000;
-        z-index: -1; /* Ensure the particles are behind the content */
-        top: 0;
-        left: 0;
+      /* Background with stars animation */
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+        overflow: hidden;
       }
 
-      /* Wrapper for the main content */
       .wrapper {
         position: relative;
-        z-index: 1; /* Ensure content is above particles */
-        background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background for readability */
+        z-index: 1; /* Ensure content is above stars */
+        background-color: rgba(255, 255, 255, 0.9); /* White overlay for readability */
         padding: 20px;
         margin: 50px auto;
         border-radius: 10px;
@@ -31,7 +29,6 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
 
-      /* Content alignment and styling */
       h1, h2 {
         text-align: center;
         color: #333;
@@ -41,19 +38,79 @@
         color: #4CAF50;
         text-decoration: none;
       }
-    </style>
 
-    <!-- Include Particle.js Library -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      .stars {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120%;
+        transform: rotate(-45deg);
+      }
+
+      .star {
+        $star-count: 50;
+        --star-color: #fff;
+        --star-tail-length: 6em;
+        --star-tail-height: 2px;
+        --star-width: calc(var(--star-tail-length) / 6);
+        --fall-duration: 9s;
+        --tail-fade-duration: var(--fall-duration);
+
+        position: absolute;
+        top: var(--top-offset);
+        left: 0;
+        width: var(--star-tail-length);
+        height: var(--star-tail-height);
+        color: var(--star-color);
+        background: linear-gradient(45deg, currentColor, transparent);
+        border-radius: 50%;
+        filter: drop-shadow(0 0 6px currentColor);
+        transform: translate3d(104em, 0, 0);
+        animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
+      }
+
+      @keyframes fall {
+        to {
+          transform: translate3d(-30em, 0, 0);
+        }
+      }
+
+      @keyframes tail-fade {
+        0%, 50% {
+          width: var(--star-tail-length);
+          opacity: 1;
+        }
+
+        70%, 80% {
+          width: 0;
+          opacity: 0.4;
+        }
+
+        100% {
+          width: 0;
+          opacity: 0;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 0.6;
+        }
+      }
+    </style>
     
     {% include head-custom.html %}
   </head>
   <body>
+    <!-- Starry background -->
+    <div class="stars">
+      <div class="star"></div>
+      <div class="star"></div>
+      <div class="star"></div>
+      <!-- Repeat as many stars as you need -->
+    </div>
 
-    <!-- Particle Background -->
-    <div id="particles-js"></div>
-
-    <!-- Main Content Wrapper -->
     <div class="wrapper">
       <header>
         <!-- Title -->
@@ -77,90 +134,6 @@
         {{ content }}
       </section>
     </div>
-
-    <!-- Particle.js Configuration -->
-    <script>
-      particlesJS("particles-js", {
-        "particles": {
-          "number": {
-            "value": 100,
-            "density": {
-              "enable": true,
-              "value_area": 800
-            }
-          },
-          "color": {
-            "value": "#00ff00"
-          },
-          "shape": {
-            "type": "circle",
-            "stroke": {
-              "width": 0,
-              "color": "#000000"
-            },
-            "polygon": {
-              "nb_sides": 5
-            }
-          },
-          "opacity": {
-            "value": 0.5,
-            "random": false,
-            "anim": {
-              "enable": false,
-              "speed": 1,
-              "opacity_min": 0.1,
-              "sync": false
-            }
-          },
-          "size": {
-            "value": 5,
-            "random": true,
-            "anim": {
-              "enable": false,
-              "speed": 40,
-              "size_min": 0.1,
-              "sync": false
-            }
-          },
-          "line_linked": {
-            "enable": true,
-            "distance": 150,
-            "color": "#00ff00",
-            "opacity": 0.4,
-            "width": 1
-          },
-          "move": {
-            "enable": true,
-            "speed": 6,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-              "enable": false,
-              "rotateX": 600,
-              "rotateY": 1200
-            }
-          }
-        },
-        "interactivity": {
-          "detect_on": "canvas",
-          "events": {
-            "onhover": {
-              "enable": true,
-              "mode": "grab"
-            },
-            "onclick": {
-              "enable": true,
-              "mode": "push"
-            },
-            "resize": true
-          }
-        },
-        "retina_detect": true
-      });
-    </script>
 
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
   </body>
