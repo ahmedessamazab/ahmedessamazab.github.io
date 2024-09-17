@@ -1,140 +1,34 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="stars">
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+  <div class="star"></div>
+</div>
 
-    {% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <style>
-      /* Background with stars animation */
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
-        overflow: hidden;
-      }
-
-      .wrapper {
-        position: relative;
-        z-index: 1; /* Ensure content is above stars */
-        background-color: rgba(255, 255, 255, 0.9); /* White overlay for readability */
-        padding: 20px;
-        margin: 50px auto;
-        border-radius: 10px;
-        max-width: 800px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      h1, h2 {
-        text-align: center;
-        color: #333;
-      }
-
-      a {
-        color: #4CAF50;
-        text-decoration: none;
-      }
-
-      .stars {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 120%;
-        transform: rotate(-45deg);
-      }
-
-      .star {
-        $star-count: 50;
-        --star-color: #fff;
-        --star-tail-length: 6em;
-        --star-tail-height: 2px;
-        --star-width: calc(var(--star-tail-length) / 6);
-        --fall-duration: 9s;
-        --tail-fade-duration: var(--fall-duration);
-
-        position: absolute;
-        top: var(--top-offset);
-        left: 0;
-        width: var(--star-tail-length);
-        height: var(--star-tail-height);
-        color: var(--star-color);
-        background: linear-gradient(45deg, currentColor, transparent);
-        border-radius: 50%;
-        filter: drop-shadow(0 0 6px currentColor);
-        transform: translate3d(104em, 0, 0);
-        animation: fall var(--fall-duration) var(--fall-delay) linear infinite, tail-fade var(--tail-fade-duration) var(--fall-delay) ease-out infinite;
-      }
-
-      @keyframes fall {
-        to {
-          transform: translate3d(-30em, 0, 0);
-        }
-      }
-
-      @keyframes tail-fade {
-        0%, 50% {
-          width: var(--star-tail-length);
-          opacity: 1;
-        }
-
-        70%, 80% {
-          width: 0;
-          opacity: 0.4;
-        }
-
-        100% {
-          width: 0;
-          opacity: 0;
-        }
-      }
-
-      @keyframes blink {
-        50% {
-          opacity: 0.6;
-        }
-      }
-    </style>
+<div class="wrapper">
+  <header>
+    <!-- Title -->
+    <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
     
-    {% include head-custom.html %}
-  </head>
-  <body>
-    <!-- Starry background -->
-    <div class="stars">
-      <div class="star"></div>
-      <div class="star"></div>
-      <div class="star"></div>
-      <!-- Repeat as many stars as you need -->
+    <!-- Subtitle "Data Engineer" -->
+    <h2 style="text-align: center;">Data Engineer</h2>
+
+    <!-- Logo -->
+    {% if site.logo %}
+      <img src="{{site.logo | relative_url}}" alt="Logo" style="width: 250px; height: 250px; border-radius: 50%; display: block; margin: 0 auto;" />
+    {% endif %}
+
+    <!-- CV Download Button -->
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="{{ 'AHMED AZAB DE.pdf' | relative_url }}" download="AhmedAzab_CV.pdf" style="text-decoration: none; font-size: 18px; background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 5px;">Download My CV</a>
     </div>
+  </header>
 
-    <div class="wrapper">
-      <header>
-        <!-- Title -->
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-        
-        <!-- New H2 for "Data Engineer" centered under the title -->
-        <h2>Data Engineer</h2>
-
-        <!-- Logo with updated size -->
-        {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" style="width: 250px; height: 250px; border-radius: 50%; display: block; margin: 0 auto;" />
-        {% endif %}
-
-        <!-- CV Download Section -->
-        <div style="text-align: center; margin-top: 20px;">
-          <a href="{{ 'AHMED AZAB DE.pdf' | relative_url }}" download="AhmedAzab_CV.pdf" style="text-decoration: none; font-size: 18px; background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 5px;">Download My CV</a>
-        </div>
-
-      </header>
-      <section>
-        {{ content }}
-      </section>
-    </div>
-
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-  </body>
-</html>
+  <section>
+    {{ content }}
+  </section>
+</div>
