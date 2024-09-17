@@ -45,28 +45,30 @@
 
       /* Make links darker than the background */
       a {
-        color: #103783 !important; /* Very dark brownish-red */
+        color: #103783 !important; /* Dark blue */
         text-decoration: none;
       }
 
       /* Darken further on hover */
       a:hover {
-        color: #c5302e !important; /* Even darker on hover */
+        color: #c5302e !important; /* Red on hover */
       }
 
-      /* Darker "Download My CV" button */
+      /* White button with black shadow */
       .cv-download a {
         font-size: 18px;
-        background-color: #60696b; /* Darker reddish-brown button */
-        color: white;
+        background-color: #ffffff; /* White button */
+        color: #333; /* Dark text color */
         padding: 10px 20px;
         border-radius: 5px;
         text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Black shadow */
+        transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
       }
 
-      /* Darker button on hover */
+      /* On hover, increase shadow */
       .cv-download a:hover {
-        background-color: #60696b; /* Darker shade on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
       }
 
       /* Add extra space under and before the "Download My CV" button */
