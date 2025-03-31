@@ -55,7 +55,7 @@ Data Engineer with \textbf{\textit{4+ years of experience}} in designing and mai
 - Contributed to the creation of a chatbot by preparing and collecting data.
 - Gained experience working with AWS services.
 
-### [High Institute of Electronic Engineering]| Teaching Assistant
+### [High Institute of Electronic Engineering](https://study-in-egypt.gov.eg/categories/All/315/Higher-Institute-of-Electronic-Engineering---Belbeis)| Teaching Assistant
 **Oct 2020 – June 2021 | Full time | Belbis, Egypt**  
 - Assisted in teaching undergraduate courses in Computer Engineering, focusing on programming.
 - Conducted lab sessions, providing hands-on guidance in data structure, digital logic design, and operating systems.
