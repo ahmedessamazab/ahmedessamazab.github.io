@@ -3,7 +3,7 @@
 [Email](mailto:ahmedazab1235@yahoo.com) | [LinkedIn](https://www.linkedin.com/in/ahmedessam1235) | [GitHub](https://github.com/ahmedazab1235)
 
 ## About
-Data Engineer with \textbf{\textit{around 5 years of experience}} in designing and maintaining scalable data pipelines using Python, SQL, and cloud technologies (Azure, AWS, GCP). At LXT, I build internal data platforms and develop production-ready pipelines to support analytics and machine learning use cases. Skilled in ETL, big data processing, and modern MLOps practices. Currently pursuing a Master’s in AI \& Data Science at Czestochowa University of Technology. Passionate about creating impactful data-driven solutions and continuously growing through hands-on engineering, research, and teaching.
+Data Engineer with around 5 years of experience in designing and maintaining scalable data pipelines using Python, SQL, and cloud technologies (Azure, AWS, GCP). At LXT, I build internal data platforms and develop production-ready pipelines to support analytics and machine learning use cases. Skilled in ETL, big data processing, and modern MLOps practices. Currently pursuing a Master’s in AI \& Data Science at Czestochowa University of Technology. Passionate about creating impactful data-driven solutions and continuously growing through hands-on engineering, research, and teaching.
 
 ## 👨‍💻 Experience
 
