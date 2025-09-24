@@ -3,20 +3,18 @@
 [Email](mailto:ahmedazab1235@yahoo.com) | [LinkedIn](https://www.linkedin.com/in/ahmedessam1235) | [GitHub](https://github.com/ahmedazab1235)
 
 ## About
-Data Engineer with \textbf{\textit{4+ years of experience}} in designing and maintaining scalable data pipelines using Python, SQL, and cloud technologies (Azure, AWS, GCP). Experienced in ETL, big data processing, and machine learning applications. Currently pursuing a Master’s in AI \& Data Science at the Czestochowa University of Technology. Passionate about building data-driven solutions that optimize business performance. Actively seeking full-time opportunities in Poland while continuing my academic journey.
+Data Engineer with \textbf{\textit{around 5 years of experience}} in designing and maintaining scalable data pipelines using Python, SQL, and cloud technologies (Azure, AWS, GCP). At LXT, I build internal data platforms and develop production-ready pipelines to support analytics and machine learning use cases. Skilled in ETL, big data processing, and modern MLOps practices. Currently pursuing a Master’s in AI \& Data Science at Czestochowa University of Technology. Passionate about creating impactful data-driven solutions and continuously growing through hands-on engineering, research, and teaching.
 
 ## 👨‍💻 Experience
 
 ### [LXT](https://www.lxt.ai/) | Data Engineer  
 **Jan 2024 – Present | Full time | Egypt**  
-- Specialize in creating and maintaining robust data pipelines using Airflow and Mage.
-- Work extensively with Google Cloud Platform (GCP) services for scalable data solutions.
-- Design scalable and reliable solutions for efficient data integration and processing using Python.
-- Developed Streamlit tools to enable non-technical users to handle data tasks, reducing support tickets and freeing up engineering resources for deeper solutions.
-- Expertise in handling both unstructured and semi-structured data.
-- Support diverse data needs for advanced analytics and critical decision-making.
-- Focus on ensuring optimal data availability and quality within the organization.
-
+- Lead the development of internal tools, including a Streamlit platform that reduced support requests by 40\% and empowered non-technical users with data access.
+- Design, build, and maintain scalable data pipelines using Airflow and Mage on GCP, handling structured and unstructured data for analytics and ML workflows.
+- Collaborate closely with cross-functional teams (annotation, QA, DevOps) to align technical solutions with business objectives.
+- Drive Python-based ETL frameworks and uphold best practices to ensure efficiency, reliability, and data quality.
+- Provide technical mentorship, conduct code reviews, and contribute to architecture decisions and internal tooling strategies.
+- Support strategic planning and delivery across multiple data projects, ensuring high performance and continuous improvement.
 
 ### [Digital Egypt Pioneers Initiative - DEPI](https://depi.gov.eg/) | Session Lead \& Instructor (Data Engineering, Data Science)
 **Apr 2024 – Present | Part-time | Egypt**  
